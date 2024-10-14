@@ -31,14 +31,16 @@ OPERATIONS
 1.create
 2.alter
 3.drop
-4.truncate
+4.truncate - To delete entire data - Where condition won't work
+
+* to change table name: rename table name to change table name
 
 2.DML-Data Manipulation language:
 OPERATIONS:
 1.select
 2.insert
 3.update
-4.delete
+4.delete - To delete particular data - Where condition will work
  
 3. TCL-
 
@@ -64,6 +66,12 @@ git remote add origin "https://github.com/SheikAmeeth/Sample.git"
 
 git push origin master
 
+
+DDL COMMANDS
+
+Ctrl+\ not to execute this query
+Ctrl+/ to execute this single line query
+*/ from to end query */
 
 
 

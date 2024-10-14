@@ -1,0 +1,49 @@
+create table school_details(Roll_No int primary key,Name varchar(50) ,Age int, Class varchar(10),Address varchar(100));
+select * from school_details;
+alter table school_details add Sex varchar(20);
+insert into school_details values(001,'Sathish',5,'LKG','Chennai','Male');
+insert into school_details values(002,'Mani',5,'LKG','Chennai','Male');
+insert into school_details values(003,'Gokul',5,'LKG','Chennai','Male');
+insert into school_details values(004,'Selvam',5,'LKG','Chennai','Male');
+insert into school_details values(005,'Aravind',5,'LKG','Chennai','Male');
+insert into school_details values(006,'Vignesh',5,'LKG','Chennai','Male');
+insert into school_details values(007,'Abdul',5,'LKG','Chennai','Male');
+insert into school_details values(008,'Valli',5,'LKG','Chennai','Female');
+insert into school_details values(009,'Priya',5,'LKG','Chennai','Female');
+insert into school_details values(009,'Gokila',5,'LKG','Chennai','Female');
+insert into school_details values(009,'Kala',5,'LKG','Chennai','Female');
+alter table school_details modify Sex varchar(10);
+delete from school_details where Name='Sathish';
+update school_details set Roll_No=010 where Name='Priya';
+update school_details set Roll_No=011 where Name='Gokila';
+update school_details set Roll_No=012 where Name='Kala';
+select * from school_details where Name='Aravind';
+desc school_details;
+select * from school_details Where Name like 'A%';
+select * from school_details Where Name like 'V%';
+update school_details set Class='UKG' where  Class='LKG';
+select  * from school_details order by Name;
+select  * from school_details order by Roll_No;
+select * from school_details where Roll_No between 1 AND 10 limit 7; 
+select * from school_details where Class='UKG' order  by Sex desc;
+select * from school_details order by ( case Name
+when 'Aravind' THEN 1
+when 'Vignesh' THEN 2
+when 'Valli' THEN 3
+else 50
+END
+);
+select count(*) from school_details;
+select count(*) from school_details where Name='Aravind';
+select sum(Roll_No) from school_details where class='UKG';
+alter table school_details add Fees int;
+alter table school_details add Fees_Scheme varchar(50);
+insert into school_details values(013,'Hameed',6,'UKG','Salem','Male',20000,'Annualy');
+update school_details set Age=6 where Name='Valli';
+select * from school_details where Age=6;
+select * from school_details where Fees>2000;
+select * from school_details where Name Not in ('Valli');
+select * from school_details where Address Not in ('Chennai');
+select * from school_details where Name  like 'A%';
+update school_details set Address='Coimbator' where  Address='Salem';
+select count(*)howmanyUKG from  school_details where Class='UKG';
